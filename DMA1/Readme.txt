@@ -1,0 +1,1 @@
+APP2 is the application project used in the live demo.
