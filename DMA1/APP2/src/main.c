@@ -52,8 +52,8 @@ int main(){
   	 print("file read failed\n\r");
     	 return XST_FAILURE;
     }
-
-	Xil_DCacheInvalidate();
+    Xil_DCacheFlush();
+	//Xil_DCacheInvalidate();
 
 	print_28x28_u8(inputImage);
 
@@ -77,6 +77,7 @@ int main(){
 	}
 
 	print("DMA transfer success..\n\r");
+	Xil_DCacheInvalidate();
 	print_28x28_u8(outputImage);
 	status = WriteFile("lenag.bin",(outputImageWidth*outputImageHeight),(u32)outputImage);
 	if (status != XST_SUCCESS) {
