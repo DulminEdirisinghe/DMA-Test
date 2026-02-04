@@ -27,3 +27,12 @@ platform generate -domains
 platform active {DMA}
 platform config -updatehw {C:/Users/asus/Documents/Projects/Vivado/DMA1/design_1_wrapper.xsa}
 platform generate -domains 
+platform active {DMA}
+platform config -updatehw {C:/Users/asus/Documents/Projects/Vivado/DMA1/design_1_wrapper.xsa}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform config -updatehw {C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/design_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/design_1_wrapper.xsa}
+platform generate -domains 

@@ -2,12 +2,12 @@
 # In Vitis IDE create a Single Application Debug launch configuration,
 # change the debug type to 'Attach to running target' and provide this 
 # tcl script in 'Execute Script' option.
-# Path of this script: C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl
+# Path of this script: C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\debugger_app2-default.tcl
 # 
 # 
 # Usage with xsct:
 # To debug using xsct, launch xsct and run below command
-# source C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl
+# source C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\debugger_app2-default.tcl
 # 
 connect -url tcp:127.0.0.1:3121
 targets -set -nocase -filter {name =~"APU*"}
@@ -25,4 +25,5 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con

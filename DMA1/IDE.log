@@ -1370,3 +1370,425 @@ con
 ----------------End of Script----------------
 
 09:40:10 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:59:12 INFO  : Disconnected from the channel tcfchan#6.
+09:22:49 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\temp_xsdb_launch_script.tcl
+09:22:57 INFO  : XSCT server has started successfully.
+09:22:57 INFO  : plnx-install-location is set to ''
+09:22:57 INFO  : Successfully done setting XSCT server connection channel  
+09:22:57 INFO  : Successfully done setting workspace for the tool. 
+09:23:05 INFO  : Platform repository initialization has completed.
+09:23:05 INFO  : Registering command handlers for Vitis TCF services
+09:23:18 INFO  : Successfully done query RDI_DATADIR 
+09:23:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:23:39 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:23:39 INFO  : 'jtag frequency' command is executed.
+09:23:39 INFO  : Context for 'APU' is selected.
+09:23:39 INFO  : System reset is completed.
+09:23:42 INFO  : 'after 3000' command is executed.
+09:23:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:23:44 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:23:44 INFO  : Context for 'APU' is selected.
+09:23:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:23:44 INFO  : 'configparams force-mem-access 1' command is executed.
+09:23:44 INFO  : Context for 'APU' is selected.
+09:23:44 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:23:45 INFO  : 'ps7_init' command is executed.
+09:23:45 INFO  : 'ps7_post_config' command is executed.
+09:23:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:23:45 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:23:46 INFO  : 'configparams force-mem-access 0' command is executed.
+09:23:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:23:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:23:46 INFO  : 'con' command is executed.
+09:23:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:23:46 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:23:58 INFO  : Disconnected from the channel tcfchan#1.
+09:23:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:23:58 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:23:58 INFO  : 'jtag frequency' command is executed.
+09:23:58 INFO  : Context for 'APU' is selected.
+09:23:58 INFO  : System reset is completed.
+09:24:01 INFO  : 'after 3000' command is executed.
+09:24:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:24:02 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:24:02 INFO  : Context for 'APU' is selected.
+09:24:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:24:05 INFO  : 'configparams force-mem-access 1' command is executed.
+09:24:05 INFO  : Context for 'APU' is selected.
+09:24:05 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:24:06 INFO  : 'ps7_init' command is executed.
+09:24:06 INFO  : 'ps7_post_config' command is executed.
+09:24:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:24:06 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:24:06 INFO  : 'configparams force-mem-access 0' command is executed.
+09:24:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:24:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:24:06 INFO  : 'con' command is executed.
+09:24:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:24:06 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:24:39 INFO  : Disconnected from the channel tcfchan#2.
+09:24:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:24:39 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:24:39 INFO  : 'jtag frequency' command is executed.
+09:24:39 INFO  : Context for 'APU' is selected.
+09:24:39 INFO  : System reset is completed.
+09:24:42 INFO  : 'after 3000' command is executed.
+09:24:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:24:44 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:24:44 INFO  : Context for 'APU' is selected.
+09:24:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:24:47 INFO  : 'configparams force-mem-access 1' command is executed.
+09:24:47 INFO  : Context for 'APU' is selected.
+09:24:47 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:24:48 INFO  : 'ps7_init' command is executed.
+09:24:48 INFO  : 'ps7_post_config' command is executed.
+09:24:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:24:48 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:24:48 INFO  : 'configparams force-mem-access 0' command is executed.
+09:24:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:24:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:24:48 INFO  : 'con' command is executed.
+09:24:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:24:48 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:25:12 INFO  : Disconnected from the channel tcfchan#3.
+09:25:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:25:12 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:25:12 INFO  : 'jtag frequency' command is executed.
+09:25:12 INFO  : Context for 'APU' is selected.
+09:25:12 INFO  : System reset is completed.
+09:25:15 INFO  : 'after 3000' command is executed.
+09:25:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:25:16 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:25:17 INFO  : Context for 'APU' is selected.
+09:25:19 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:25:19 INFO  : 'configparams force-mem-access 1' command is executed.
+09:25:19 INFO  : Context for 'APU' is selected.
+09:25:19 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:25:20 INFO  : 'ps7_init' command is executed.
+09:25:20 INFO  : 'ps7_post_config' command is executed.
+09:25:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:25:20 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:25:20 INFO  : 'configparams force-mem-access 0' command is executed.
+09:25:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:25:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:25:20 INFO  : 'con' command is executed.
+09:25:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:25:20 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:25:43 INFO  : Disconnected from the channel tcfchan#4.
+09:25:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:25:43 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:25:43 INFO  : 'jtag frequency' command is executed.
+09:25:43 INFO  : Context for 'APU' is selected.
+09:25:43 INFO  : System reset is completed.
+09:25:46 INFO  : 'after 3000' command is executed.
+09:25:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:25:47 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:25:48 INFO  : Context for 'APU' is selected.
+09:25:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:25:50 INFO  : 'configparams force-mem-access 1' command is executed.
+09:25:50 INFO  : Context for 'APU' is selected.
+09:25:50 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:25:51 INFO  : 'ps7_init' command is executed.
+09:25:51 INFO  : 'ps7_post_config' command is executed.
+09:25:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:25:51 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:25:51 INFO  : 'configparams force-mem-access 0' command is executed.
+09:25:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:25:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:25:52 INFO  : 'con' command is executed.
+09:25:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:25:52 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:28:17 INFO  : Checking for BSP changes to sync application flags for project 'APP2'...
+09:28:26 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+09:28:45 INFO  : Disconnected from the channel tcfchan#5.
+09:28:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:28:46 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:28:46 INFO  : 'jtag frequency' command is executed.
+09:28:46 INFO  : Context for 'APU' is selected.
+09:28:46 INFO  : System reset is completed.
+09:28:49 INFO  : 'after 3000' command is executed.
+09:28:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:28:50 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:28:50 INFO  : Context for 'APU' is selected.
+09:28:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:28:53 INFO  : 'configparams force-mem-access 1' command is executed.
+09:28:53 INFO  : Context for 'APU' is selected.
+09:28:53 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:28:54 INFO  : 'ps7_init' command is executed.
+09:28:54 INFO  : 'ps7_post_config' command is executed.
+09:28:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:28:54 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:28:54 INFO  : 'configparams force-mem-access 0' command is executed.
+09:28:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:28:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:28:54 INFO  : 'con' command is executed.
+09:28:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:28:54 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\systemdebugger_app2_system_standalone.tcl'
+09:32:24 INFO  : Checking for BSP changes to sync application flags for project 'APP2'...
+09:32:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+09:32:39 INFO  : Checking for BSP changes to sync application flags for project 'APP'...
+09:32:44 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+09:33:03 INFO  : Disconnected from the channel tcfchan#7.
+09:33:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:33:04 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:33:04 INFO  : 'jtag frequency' command is executed.
+09:33:04 INFO  : Context for 'APU' is selected.
+09:33:04 INFO  : System reset is completed.
+09:33:07 INFO  : 'after 3000' command is executed.
+09:33:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:33:09 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:33:09 INFO  : Context for 'APU' is selected.
+09:33:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:33:12 INFO  : 'configparams force-mem-access 1' command is executed.
+09:33:12 INFO  : Context for 'APU' is selected.
+09:33:12 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:33:12 INFO  : 'ps7_init' command is executed.
+09:33:12 INFO  : 'ps7_post_config' command is executed.
+09:33:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:33:13 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:33:13 INFO  : 'configparams force-mem-access 0' command is executed.
+09:33:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:33:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:33:13 INFO  : 'con' command is executed.
+09:33:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:33:13 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\debugger_app2-default.tcl'
+09:38:34 INFO  : Checking for BSP changes to sync application flags for project 'APP2'...
+09:38:39 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+09:38:46 INFO  : Checking for BSP changes to sync application flags for project 'APP'...
+09:38:51 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+09:39:24 INFO  : Disconnected from the channel tcfchan#10.
+09:39:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:39:26 INFO  : Jtag cable 'Digilent Zybo 210279545290A' is selected.
+09:39:26 INFO  : 'jtag frequency' command is executed.
+09:39:26 INFO  : Context for 'APU' is selected.
+09:39:26 INFO  : System reset is completed.
+09:39:29 INFO  : 'after 3000' command is executed.
+09:39:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}' command is executed.
+09:39:30 INFO  : Device configured successfully with "C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit"
+09:39:30 INFO  : Context for 'APU' is selected.
+09:39:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa'.
+09:39:33 INFO  : 'configparams force-mem-access 1' command is executed.
+09:39:33 INFO  : Context for 'APU' is selected.
+09:39:33 INFO  : Sourcing of 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl' is done.
+09:39:33 INFO  : 'ps7_init' command is executed.
+09:39:33 INFO  : 'ps7_post_config' command is executed.
+09:39:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:39:34 INFO  : The application 'C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:39:34 INFO  : 'configparams force-mem-access 0' command is executed.
+09:39:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545290A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279545290A-13722093-0"}
+fpga -file C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/asus/Documents/Projects/Vivado/dma_transfer/DMA1/APP2/Debug/APP2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:39:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:39:34 INFO  : 'con' command is executed.
+09:39:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:39:34 INFO  : Launch script is exported to file 'C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\APP2_system\_ide\scripts\debugger_app2-default.tcl'
+09:49:59 INFO  : Disconnected from the channel tcfchan#13.
+12:37:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\temp_xsdb_launch_script.tcl
+12:37:22 INFO  : XSCT server has started successfully.
+12:37:22 INFO  : plnx-install-location is set to ''
+12:37:22 INFO  : Successfully done setting XSCT server connection channel  
+12:37:22 INFO  : Successfully done setting workspace for the tool. 
+12:37:43 INFO  : Platform repository initialization has completed.
+12:37:44 INFO  : Successfully done query RDI_DATADIR 
+12:37:45 INFO  : Registering command handlers for Vitis TCF services
+12:53:45 INFO  : Checking for BSP changes to sync application flags for project 'APP2'...
+12:53:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+12:54:07 INFO  : Checking for BSP changes to sync application flags for project 'APP'...
+12:54:11 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+23:49:04 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\asus\Documents\Projects\Vivado\dma_transfer\DMA1\temp_xsdb_launch_script.tcl
+23:49:21 INFO  : XSCT server has started successfully.
+23:49:21 INFO  : Successfully done setting XSCT server connection channel  
+23:49:21 INFO  : plnx-install-location is set to ''
+23:49:21 INFO  : Successfully done setting workspace for the tool. 
+23:49:40 INFO  : Platform repository initialization has completed.
+23:49:41 INFO  : Registering command handlers for Vitis TCF services
+23:50:01 INFO  : Successfully done query RDI_DATADIR 
+00:27:52 INFO  : Checking for BSP changes to sync application flags for project 'APP2'...
+00:28:23 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/hw/design_1_wrapper.xsa is already opened
+
+00:28:51 ERROR : Failed to update hardware specification for project 'DMA'.
+Reason: Failed to execute command 'platform config -updatehw {C:/Users/asus/Documents/Projects/Vivado/DMA1/design_1_wrapper.xsa}'. Click on details for more information.
+00:32:59 INFO  : Hardware specification for platform project 'DMA' is updated.
+00:35:53 INFO  : Result from executing command 'getProjects': DMA
+00:35:53 INFO  : Result from executing command 'getPlatforms': DMA|C:/Users/asus/Documents/Vivado/DMA1/DMA/export/DMA/DMA.xpfm
